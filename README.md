@@ -1,0 +1,1 @@
+# kvalifikacijasDarbs_RKozlovs

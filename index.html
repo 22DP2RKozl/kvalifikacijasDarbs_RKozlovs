@@ -9,32 +9,50 @@
             padding: 10px 20px;
             font-size: larger;
         }
-        
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
         }
-        h1 {
-            color:azure;
-            
+        aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            font-style: italic;
+            background-color: lightgray;
         }
         h2 {color:black;}
         nav ul {
             list-style-type: none;
-            background-color: rgb(85, 80, 80);
+            background-color: rgb(85, 80, 80); /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, rgb(85, 80, 80) , rgb(44, 44, 44));
+            width: 400px;
+            height: 30px;
+            border-radius: 15px;
+
         }
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin-right: 10px;
+
+            
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            text-align: center;
+            font-size: 125%;
+            
+        }
+        nav ul:hover {
+            background-color: rgb(85, 80, 80); /* For browsers that do not support gradients */
+            background-image: linear-gradient(to top, rgb(44, 44, 44), rgb(85, 80, 80));
         }
         nav ul li a:hover {
-            color: rgb(167, 4, 4);
-            font-size: 125%;
+            color: rgba(173, 173, 173, 0.87);
+
         }
+        
         .container {
             display: flex;
             justify-content: space-around;
@@ -65,8 +83,9 @@
         }
         .card button {
             background-color: white;
-            border-radius: 15px;
-            margin-bottom: 10px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            padding: 15px 55px;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -74,12 +93,39 @@
         .card button:hover {
             background-color: grey;
             color: white;
-            transform: scale(1.05);
+            transform: scale(1.15);
+        }
+        footer {
+            text-align: center;
+            background-color: rgb(180, 180, 180);
+            padding: 15px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: rgb(114, 114, 114);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 30px;
+            
+        }
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+        .dropdown a {
+            color: #8b8b8b;
+            padding: 15px 25px;
+            display: block;
+
+        }
+        .dropdown a:hover {
+            background-color: #a8a8a8;
+            color: rgb(223, 223, 223);
         }
     </style>
-  <title>
+<title>
     Nosaukums
-  </title>
+</title>
 </head>
 <body style="background-color: white;">
 
@@ -90,8 +136,17 @@
             <li><a href="#">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="#" class="dropdown-toggle">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Third</a></li>
+                </ul>
+            </li>
         </ul>
    </nav>
+   
 
 </header>
 
@@ -124,7 +179,7 @@
     <p>Paragrāfs</p>
     <img src="https://th.bing.com/th/id/OIP.DFxl_HjAxACjCoF5yMRHeAAAAA?w=163&h=176&c=7&r=0&o=5&pid=1.7" width=150px height=150px>
 
-    <aside style="background-color: gainsboro;">
+    <aside>
         <h4><b>Sānu josla</b></h4>
         <p><i>Papildus informācija</i></p>
     </aside>
